@@ -1,0 +1,14 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+body {
+    background-color: $red-500 !important;
+    background: linear-gradient(90deg, $red-500 0%, $pink-200 100%);
+}
+.bg-body-tertiary {
+    background-color: rgba(0,0,0, 0.6) !important;
+}
+.bgz {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+}
