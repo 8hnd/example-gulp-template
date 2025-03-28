@@ -80,10 +80,10 @@ gulp.task('serve', function() {
     return connect.server({
       base: './build',
       port: '3000',
-    }, browserSync({
+    }, function(){browserSync({
             baseDir: "./build",
             proxy: '127.0.0.1:3000'
-    }));
+    })});
 });
 
 function reload(done) {
@@ -102,4 +102,4 @@ exports.js = js;
 exports.html = html;
 exports.php = php;
 exports.build = gulp.series(html, styles, js, php);
-exports.watchServe = gulp.series('watch', 'serve');
+exports.watchServe = gulp.parallel('watch', 'serve');
