@@ -102,4 +102,4 @@ exports.js = js;
 exports.html = html;
 exports.php = php;
 exports.build = gulp.series(html, styles, js, php);
-exports.comeon = gulp.series('watch', 'serve');
+exports.watchServe = gulp.series('watch', 'serve');
